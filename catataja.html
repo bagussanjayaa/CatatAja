@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CatatAja!</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      display: flex;
+      background-color: #1c1c1c;
+      color: #000;
+    }
+
+    /* Sidebar Logo */
+    .sidebar {
+      width: 20%;
+      background: #111;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 2rem;
+    }
+
+    .sidebar img {
+      width: 120px;
+      border-radius: 50%;
+      padding: 10px;
+    }
+
+    /* Main container */
+    .main {
+      width: 80%;
+      display: flex;
+      justify-content: space-around;
+      padding: 1rem;
+      gap: 1rem;
+    }
+
+    .card {
+      background: #e0e0e0;
+      border-radius: 10px;
+      padding: 1rem;
+      width: 18%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+
+    .card h2 {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    .card input, .card textarea {
+      width: 100%;
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .card button {
+      width: 100%;
+      padding: 8px;
+      background: #ccc;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .card button:hover {
+      background: #aaa;
+    }
+
+    /* Tombol + di pojok kanan bawah Dashboard */
+    .plus-btn {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      background: #111;
+      color: white;
+      font-size: 26px;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      transition: 0.3s;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .row button {
+      width: 48%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <img src="logo.png" alt="Logo CatatAja">
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+
+    <!-- Dashboard -->
+    <div class="card" style="position: relative;">
+      <h2>Dashboard</h2>
+      <div style="flex:1; background:#ccc; border-radius:8px; height:150px;"></div>
+
+      <!-- Tombol Tambah (+) hanya di Dashboard -->
+      <div class="plus-btn">+</div>
+    </div>
+
+    <!-- Tambah Catatan -->
+    <div class="card">
+      <h2>Tambah Catatan</h2>
+      <input type="text" placeholder="Masukan Judul">
+      <textarea rows="5" placeholder="Masukan Isi Catatan..."></textarea>
+      <button>Simpan</button>
+    </div>
+
+    <!-- Tampilan Catatan -->
+    <div class="card">
+      <h2>Tampilan Catatan</h2>
+      <input type="text" placeholder="Judul Catatan" disabled>
+      <textarea rows="5" placeholder="Isi Catatan..." disabled></textarea>
+      <div class="row">
+        <button>Edit</button>
+        <button>Hapus</button>
+      </div>
+    </div>
+
+    <!-- Edit Catatan -->
+    <div class="card">
+      <h2>Edit Catatan</h2>
+      <input type="text" placeholder="Ganti Judul">
+      <textarea rows="5" placeholder="Edit Isi Catatan..."></textarea>
+      <button>Simpan</button>
+    </div>
+
+  </div>
+</body>
+</html>
